@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE package-info SYSTEM "http://www.elkarte.net/site/package-info">
+<package-info xmlns="http://www.elkarte.net/site/package-info" xmlns:elk="http://www.elkarte.net/">
+	<license><![CDATA[
+/**
+ * Redirect to external
+ *
+ * @author emanuele
+ * @license   BSD http://opensource.org/licenses/BSD-3-Clause
+ *
+ * @version 0.0.1
+ */
+	]]></license>
+	<id>emanuele:redirect_to_ext</id>
+	<name>Redirect to external</name>
+	<version>0.0.1</version>
+	<type>modification</type>
+	<install for="1.0 - 1.0.99">
+		<require-file name="Redirect.integrate.php" destination="SOURCEDIR" />
+		<require-file name="Redirect.controller.php" destination="CONTROLLERDIR" />
+		<require-file name="Redirect.template.php" destination="THEMEDIR" />
+		<require-file name="Redirect.english.php" destination="LANGUAGEDIR/english" />
+		<code>install.php</code>
+	</install>
+	<uninstall for="1.0 - 1.0.99">
+		<require-file name="SOURCEDIR/Redirect.integrate.php" />
+		<require-file name="CONTROLLERDIR/Redirect.controller.php" />
+		<require-file name="THEMEDIR/Redirect.template.php" />
+		<require-file name="LANGUAGEDIR/english/Redirect.english.php" />
+		<code>install.php</code>
+	</uninstall>
+</package-info>
